@@ -1,0 +1,15 @@
+{
+  "name": "rating-scale-with-rtl",
+  "version": "1.0.1",
+  "description": "rating scale that support rtl and can change color and the length of the rating",
+  "main": "Rating.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ahmad ALDadah",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}

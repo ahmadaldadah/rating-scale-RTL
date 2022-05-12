@@ -17,4 +17,4 @@ class App extends React.Component {
         return <Rating />;
     }
 }
-'''
+'''# rating-scale-rtl

@@ -4,11 +4,11 @@ This Rating scale is react component for rating scale that support RTL and you c
 
 # Installation
 
-'''npm i rating-scale-with-rtl'''
+'npm i rating-scale-with-rtl'
 
 # Usage
 
-'''js
+'
 import React from 'react';
 import Rating  from 'rating-scale-with-rtl';
  
@@ -17,4 +17,5 @@ class App extends React.Component {
         return <Rating />;
     }
 }
-'''# rating-scale-rtl
+'
+# rating-scale-rtl

@@ -3,6 +3,9 @@
   "version": "1.0.3",
   "description": "rating scale that support rtl and can change color and the length of the rating",
   "main": "Rating.js",
+  "keywords": [
+    "react","javascript","rating"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

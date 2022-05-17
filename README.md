@@ -12,19 +12,11 @@ Install my-project with npm
 npm i rating-scale-with-rtl
 ```
     
-## Deployment
-
-To deploy this project run
-
-```bash
-  npm start
-```
-
 
 ## Usage/Examples
 
 ```javascript
-import Rating from 'Rating'
+import Rating from 'rating-scale-with-rtl'
 
 function App() {
   return <Rating/>
@@ -39,7 +31,7 @@ https://codepen.io/ahmad-aldadah/pen/RwQRwLP
 
 ## Authors
 
-- [@ahmadaldadah](https://github.com/ahmadaldadah/rating-scale-RTL)
+- [@ahmadaldadah](https://github.com/ahmadaldadah/rating-scale-with-rtl)
 
 
 ## Badges

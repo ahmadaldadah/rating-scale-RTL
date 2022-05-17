@@ -1,4 +1,5 @@
 import React ,{ useState , useEffect } from "react";
+import "./Rating.css" ;
 const Rating = ({colorStart = "#e4e5e9",colorMaster = "#ffc107", rtl=false}) =>{
     const [rating , setRating] = useState(null);
     const [hover , setHover] = useState(null);

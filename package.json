@@ -2,6 +2,12 @@
   "name": "rating-scale-with-rtl",
   "version": "1.0.4",
   "description": "rating scale that support rtl and can change color and the length of the rating",
+  "private": false,
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
   "main": "Rating.js",
   "keywords": [
     "react",
@@ -9,16 +15,16 @@
     "rating"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/component -d dist --copy-files"
+
   },
   "author": "Ahmad ALDadah",
   "license": "ISC",
   "peerDependencies": {
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.17.10",
-    "@babel/preset-react": "^7.17.12"
+    "react-dom": "^18.1.0",
+    "react": "^18.1.0"
+
   }
+ 
 }

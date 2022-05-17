@@ -40,13 +40,13 @@ const Rating = ({colorStart = "#e4e5e9",colorMaster = "#ffc107", rtl=false}) =>{
         <div className="takeValue">
             <label>
                 Choose rating color
-                <input type="text" className="inputClass" onChange={getInputValue} />
+                <input type="color" className="inputClass" onChange={getInputValue} />
             </label>
             
       
             <label>
                 Choose background color
-                <input type="text" className="inputClass" onChange={inputValue} />
+                <input type="color" className="inputClass" onChange={inputValue} />
 
             </label>
         </div>

@@ -31,7 +31,7 @@ https://codepen.io/ahmad-aldadah/pen/RwQRwLP
 
 ## Authors
 
-- [@ahmadaldadah](https://github.com/ahmadaldadah/rating-scale-with-rtl)
+- [@ahmadaldadah](https://github.com/ahmadaldadah/rating-scale-rtl)
 
 
 ## Badges

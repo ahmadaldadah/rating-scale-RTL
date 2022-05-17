@@ -5,7 +5,7 @@ module.exports = {
   entry: "./src/rating.js",
   output: {
     path: path.resolve("build"),
-    filename: "rating.js",
+    filename: "Rating.js",
     libraryTarget: "commonjs2"
   },
   module: {

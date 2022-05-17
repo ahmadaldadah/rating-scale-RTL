@@ -1,6 +1,6 @@
 {
   "name": "rating-scale-with-rtl",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "rating scale that support rtl and can change color and the length of the rating",
   "private": false,
   "babel": {

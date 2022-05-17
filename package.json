@@ -1,6 +1,6 @@
 {
   "name": "rating-scale-with-rtl",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "rating scale that support rtl and can change color and the length of the rating",
   "private": false,
   "babel": {
@@ -17,14 +17,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish:npm": "rm -rf dist && mkdir dist &&  babel src/component -d dist --copy-files"
-
   },
   "author": "Ahmad ALDadah",
   "license": "ISC",
   "peerDependencies": {
     "react-dom": "^18.1.0",
     "react": "^18.1.0"
-
   }
- 
 }

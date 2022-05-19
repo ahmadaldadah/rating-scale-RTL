@@ -2,7 +2,7 @@ var path = require("path");
 
 module.exports = {
   mode: "production",
-  entry: "./src/rating.js",
+  entry: "./src/Rating.js",
   output: {
     path: path.resolve("build"),
     filename: "Rating.js",

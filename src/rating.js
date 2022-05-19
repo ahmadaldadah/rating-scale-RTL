@@ -1,6 +1,6 @@
 import React ,{ useState , useEffect } from "react";
 import "./rating.css" ;
-const Rating = ({colorStart = "#e4e5e9",colorMaster = "#ffc107", rtl=false}) =>{
+const Rating = ({colorBackground = "#e4e5e9",colorRating = "#ffc107", rtl=false}) =>{
     const [rating , setRating] = useState(null);
     const [hover , setHover] = useState(null);
     const [input , setInput] = useState(null);
@@ -33,20 +33,20 @@ const Rating = ({colorStart = "#e4e5e9",colorMaster = "#ffc107", rtl=false}) =>{
        ((0|(1<<8) + g + (256 - g) * percent / 100).toString(16)).substr(1) +
        ((0|(1<<8) + b + (256 - b) * percent / 100).toString(16)).substr(1);
     }   
-    let hoverColor = increaseBrightness(input||colorMaster , 75);
+    let hoverColor = increaseBrightness(input||colorRating , 75);
     console.log(hoverColor);
     return (
     <div style={{marginBottom:"15px"} } >
         <div className="takeValue">
             <label>
                 Choose rating color
-                <input type="color" className="inputClass" onChange={getInputValue} />
+                <input type="color" value={colorRating}  className="inputClass" onChange={getInputValue} />
             </label>
             
       
             <label>
                 Choose background color
-                <input type="color" className="inputClass" onChange={inputValue} />
+                <input type="color" value={colorBackground}  className="inputClass" onChange={inputValue} />
 
             </label>
         </div>
@@ -59,8 +59,8 @@ const Rating = ({colorStart = "#e4e5e9",colorMaster = "#ffc107", rtl=false}) =>{
                 return(
                 <div className={rtl === true ? "scaleRtl" : "scale"} key={i} 
                 onClick={()=>setRating(ratingValue)}
-                style={ratingValue <=  rating  ? {backgroundColor :  input || colorMaster  }:
-                ratingValue <= hover ?{backgroundColor : hoverColor} :{backgroundColor : input2 ||  colorStart }} 
+                style={ratingValue <=  rating  ? {backgroundColor :  input || colorRating  }:
+                ratingValue <= hover ?{backgroundColor : hoverColor} :{backgroundColor : input2 ||  colorBackground }} 
                 onMouseEnter={()=>setHover(ratingValue)}
                 onMouseLeave={()=>setHover(null)}
                 >

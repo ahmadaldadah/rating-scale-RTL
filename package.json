@@ -1,6 +1,6 @@
 {
   "name": "rating-scale-with-rtl",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "rating scale that support rtl and can change color and the length of the rating",
   "main": "./build/Rating.js",
   "scripts": {

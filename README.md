@@ -19,7 +19,7 @@ npm i rating-scale-with-rtl
 import Rating from 'rating-scale-with-rtl'
 
 function App() {
-  return <Rating/>
+  return <Rating rtl={false} length={10} colorBackground="#e4e5e9" colorRating="#ffc107" />
 }
 ```
 
@@ -29,9 +29,17 @@ function App() {
 https://codepen.io/ahmad-aldadah/pen/RwQRwLP
 
 
-## Authors
+## Available options
 
-- [@ahmadaldadah](https://github.com/ahmadaldadah/rating-scale-rtl)
+
+
+| Option    | Type     |  Default     | Description                |
+| :-------- | :------- |  :------     |:------------------------- |
+| `length` | `number` |  10     |The max number of rating to display.|
+| `rtl` | `boolean` |  false     |The dirction of the rating to display.|
+| `colorBackground` | `Hex` |  #e4e5e9     |The background color of rating to display.|
+| `colorRating` | `Hex` |  #ffc107     |The rating color to display.|
+
 
 
 ## Badges
@@ -49,6 +57,11 @@ https://codepen.io/ahmad-aldadah/pen/RwQRwLP
 
 ## Support
 
-For support, email aldadahahmad@gmail.com or contact with me on twitter - [@ahmadaldadah](https://twitter.com/ahmadaldadah)
-.
+For support, [issues](https://github.com/ahmadaldadah/rating-scale-rtl/issues) , 
+ email aldadahahmad@gmail.com or contact with me on twitter - [@ahmadaldadah](https://twitter.com/ahmadaldadah).
 
+
+## Authors
+![Ahmad ALDadah](https://en.gravatar.com/userimage/221433932/0438d5b1829563f90546947a769bac2a.jpg?size=200)
+
+- [@ahmadaldadah](https://github.com/ahmadaldadah/rating-scale-rtl)

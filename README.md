@@ -19,7 +19,7 @@ npm i rating-scale-with-rtl
 import Rating from 'rating-scale-with-rtl'
 
 function App() {
-  return <Rating rtl={false} length={10} colorBackground="#e4e5e9" colorRating="#ffc107" />
+  return <Rating rtl={false} length={10} colorBackground="#e4e5e9" colorRating="#ffc107" width='75px' height='20px' />
 }
 ```
 
@@ -36,6 +36,8 @@ https://codepen.io/ahmad-aldadah/pen/RwQRwLP
 | Option    | Type     |  Default     | Description                |
 | :-------- | :------- |  :------     |:------------------------- |
 | `length` | `number` |  10     |The max number of rating to display.|
+| `width` | `text` |  75px     |The max number of rating to display.|
+| `height` | `text` |  20px     |The max number of rating to display.|
 | `rtl` | `boolean` |  false     |The dirction of the rating to display.|
 | `colorBackground` | `Hex` |  #e4e5e9     |The background color of rating to display.|
 | `colorRating` | `Hex` |  #ffc107     |The rating color to display.|

@@ -1,6 +1,6 @@
 import React ,{ useState , useEffect } from "react";
 import "./rating.css" ;
-const Rating = ({colorBackground = "#e4e5e9",colorRating = "#ffc107", rtl=false}) =>{
+const Rating = ({colorBackground = "#e4e5e9",colorRating = "#ffc107", rtl=false ,  width = "75px" , height="20px"}) =>{
     const [rating , setRating] = useState(null);
     const [hover , setHover] = useState(null);
     const [input , setInput] = useState(null);
@@ -34,7 +34,25 @@ const Rating = ({colorBackground = "#e4e5e9",colorRating = "#ffc107", rtl=false}
        ((0|(1<<8) + b + (256 - b) * percent / 100).toString(16)).substr(1);
     }   
     let hoverColor = increaseBrightness(input||colorRating , 75);
-    console.log(hoverColor);
+
+    let ratingStyle = {
+        backgroundColor :  input || colorRating,
+        width : width,
+        height : height
+    };
+
+    let hoverStyle = {
+        backgroundColor :  hoverColor,
+        width : width,
+        height : height
+    };
+
+    let backgroundStyle = {
+        backgroundColor : input2 ||  colorBackground ,
+        width : width,
+        height : height
+    };
+
     return (
     <div style={{marginBottom:"15px"} } >
         <div className="takeValue">
@@ -59,8 +77,8 @@ const Rating = ({colorBackground = "#e4e5e9",colorRating = "#ffc107", rtl=false}
                 return(
                 <div className={rtl === true ? "scaleRtl" : "scale"} key={i} 
                 onClick={()=>setRating(ratingValue)}
-                style={ratingValue <=  rating  ? {backgroundColor :  input || colorRating  }:
-                ratingValue <= hover ?{backgroundColor : hoverColor} :{backgroundColor : input2 ||  colorBackground }} 
+                style={ratingValue <=  rating  ? ratingStyle:
+                    ratingValue <= hover ? hoverStyle :backgroundStyle}  
                 onMouseEnter={()=>setHover(ratingValue)}
                 onMouseLeave={()=>setHover(null)}
                 >

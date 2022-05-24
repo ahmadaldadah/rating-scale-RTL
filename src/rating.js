@@ -33,24 +33,24 @@ const Rating = ({colorBackground = "#e4e5e9",colorRating = "#ffc107", rtl=false 
        ((0|(1<<8) + g + (256 - g) * percent / 100).toString(16)).substr(1) +
        ((0|(1<<8) + b + (256 - b) * percent / 100).toString(16)).substr(1);
     }   
-    let hoverColor = increaseBrightness(input||colorRating , 75);
+    let hoverColor = increaseBrightness(input||colorRating , 60);
 
     let ratingStyle = {
         backgroundColor :  input || colorRating,
-        width : width,
-        height : height
+        width : `${width}px`,
+        height : `${height}px`
     };
 
     let hoverStyle = {
         backgroundColor :  hoverColor,
-        width : width,
-        height : height
+        width : `${width}px`,
+        height : `${height}px`
     };
 
     let backgroundStyle = {
         backgroundColor : input2 ||  colorBackground ,
-        width : width,
-        height : height
+        width : `${width}px`,
+        height : `${height}px`
     };
 
     return (
@@ -58,20 +58,18 @@ const Rating = ({colorBackground = "#e4e5e9",colorRating = "#ffc107", rtl=false 
         <div className="takeValue">
             <label>
                 Choose rating color
-                <input type="color" value={colorRating}  className="inputClass" onChange={getInputValue} />
+                <input type="color" value={input || colorRating}  className="inputClass" onChange={getInputValue} />
             </label>
             
       
             <label>
                 Choose background color
-                <input type="color" value={colorBackground}  className="inputClass" onChange={inputValue} />
+                <input type="color" value={input2 || colorBackground}  className="inputClass" onChange={inputValue} />
 
             </label>
         </div>
         
-        <div className={rtl === true ? "rating_scaleRtl" : "rating_scale"}
-        // style={rtl === true ? {direction : "rtl"} : {direction :"ltr"}}
-        >
+        <div className={rtl === true ? "rating_scaleRtl" : "rating_scale"}>
             {[...Array(10)].map((rate,i) => {
                 const ratingValue = i + 1;
                 return(

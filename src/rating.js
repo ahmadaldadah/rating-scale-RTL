@@ -1,38 +1,15 @@
-import React ,{ useState , useEffect } from "react";
+import React ,{ useState } from "react";
+import useInputState from "./hooks/useInputState";
+import increaseBrightness from "./increaseBrightness";
 import "./rating.css" ;
+
+
 const Rating = ({colorBackground = "#e4e5e9",colorRating = "#ffc107", rtl=false ,  width = "75px" , height="20px"}) =>{
     const [rating , setRating] = useState(null);
     const [hover , setHover] = useState(null);
-    const [input , setInput] = useState(null);
-    const [input2 , setInput2] = useState(null);
-    useEffect(() => {console.log("input state is", input)}, [input])
-    useEffect(() => {console.log("input 2 state is", input2)}, [input2])
-
-    const getInputValue = (event) => {
-         setInput(event.target.value);
-    }
-    const inputValue = (event) => {
-        setInput2(event.target.value);
-   }
-
-   const increaseBrightness = (hex , percent )=>{
-    // strip the leading # if it's there
-    hex = hex.replace(/^\s*#|\s*$/g, '');
-
-    // convert 3 char codes --> 6, e.g. `E0F` --> `EE00FF`
-    if(hex.length === 3){
-        hex = hex.replace(/(.)/g, '$1$1');
-    }
-
-    var r = parseInt(hex.substr(0, 2), 16),
-        g = parseInt(hex.substr(2, 2), 16),
-        b = parseInt(hex.substr(4, 2), 16);
-
-    return '#' +
-       ((0|(1<<8) + r + (256 - r) * percent / 100).toString(16)).substr(1) +
-       ((0|(1<<8) + g + (256 - g) * percent / 100).toString(16)).substr(1) +
-       ((0|(1<<8) + b + (256 - b) * percent / 100).toString(16)).substr(1);
-    }   
+    const [input , updateInput] = useInputState(null);
+    const [input2 , updateInput2] = useInputState(null);
+   
     let hoverColor = increaseBrightness(input||colorRating , 60);
 
     let ratingStyle = {
@@ -58,13 +35,13 @@ const Rating = ({colorBackground = "#e4e5e9",colorRating = "#ffc107", rtl=false 
         <div className="takeValue">
             <label>
                 Choose rating color
-                <input type="color" value={input || colorRating}  className="inputClass" onChange={getInputValue} />
+                <input type="color" value={input || colorRating}  className="inputClass" onChange={updateInput} />
             </label>
             
       
             <label>
                 Choose background color
-                <input type="color" value={input2 || colorBackground}  className="inputClass" onChange={inputValue} />
+                <input type="color" value={input2 || colorBackground}  className="inputClass" onChange={updateInput2} />
 
             </label>
         </div>
